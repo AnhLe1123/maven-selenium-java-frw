@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="NopCommerce" parallele="false">
+    <listeners>
+         <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+<!--        <listener class-name="reportConfig.ExtentTestListener"/>-->
+<!--        <listener class-name="reportConfig.AllureTestListener"/>-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+<!--    Global data-->
+    <parameter name="url" value="https://demo.nopcommerce.com/"/>
+    <parameter name="environment" value="DEV"/>
+
+<!--    Specific data - Level 21 part II-->
+    <parameter name="firstName" value="Automation"/>
+    <parameter name="lastName" value="Testing"/>
+    <parameter name="emailAddress" value="autotest"/>
+    <parameter name="companyName" value="QA Automation"/>
+    <parameter name="password" value="123456"/>
+    <parameter name="gender" value="Male"/>
+    <parameter name="birthDay" value="25"/>
+    <parameter name="birthMonth" value="September"/>
+    <parameter name="birthYear" value="1992"/>
+
+    <test name="Run on FIREFOX">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nopcommerce.user.Level_21_Manage_Data_Part_II"/>
+        </classes>
+    </test>
+</suite>

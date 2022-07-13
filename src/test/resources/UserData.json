@@ -1,0 +1,27 @@
+{
+  "firstName": "Automation",
+  "lastName": "Testing",
+  "emailAddress": "autotest",
+  "companyName": "QA Automation",
+  "password": "123456",
+  "gender": "Male",
+  "birthDay": "25",
+  "birthMonth": "September",
+  "birthYear": "1992",
+  "login": {
+    "username": "vanhtest",
+    "password": "123456"
+  },
+  "subjects": [
+    {
+      "name": "Math",
+      "point": 10.0
+    }, {
+      "name": "Physics",
+      "point": 8.3
+    }, {
+      "name": "Chemistry",
+      "point": 7.5
+    }
+  ]
+}

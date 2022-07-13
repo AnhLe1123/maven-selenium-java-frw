@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="SauceLab - Sort data" parallele="false">
+    <listeners>
+         <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <parameter name="url" value="https://www.saucedemo.com/"/>
+    <test name="Run on FIREFOX">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.saucelab.Level_20_Sort_ASC_DESC"/>
+        </classes>
+    </test>
+</suite>

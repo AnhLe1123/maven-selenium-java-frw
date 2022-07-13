@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="WordPress" parallele="false">
+    <listeners>
+         <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <parameter name="adminUrl" value="http://localhost:8080/wp/wp-admin"/>
+    <parameter name="userUrl" value="http://localhost:8080/wp/"/>
+    <test name="Run on FIREFOX">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.wordpress.posts.admin.Post_01_Create_Read_Upload_Delete_Search"/>
+        </classes>
+    </test>
+</suite>

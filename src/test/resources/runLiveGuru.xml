@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="LiveGuru" parallele="false">
+    <parameter name="url" value="http://live.techpanda.org/"/>
+    <test name="Run on FIREFOX">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.liveguru.datatable.Level_10_DataTable_LiveGuru"/>
+        </classes>
+    </test>
+</suite>

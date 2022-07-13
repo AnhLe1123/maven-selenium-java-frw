@@ -1,0 +1,10 @@
+/.idea/
+/allure-results/
+/browserExtensions/
+/browserLogs/
+/regressionLogs/
+/reportNGScreenshot/
+/scriptLogs/
+/target/
+/test-output/
+/extentV5/
