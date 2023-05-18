@@ -2,7 +2,8 @@ package commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.joda.time.DateTime;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,10 +28,10 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     private WebDriver driver;
 
-    protected final Log log;
+    protected final Logger log;
 
     protected BaseTest() {
-        log = LogFactory.getLog(getClass());
+        log = LogManager.getLogger(Log.class);
     }
 
     public WebDriver getDriver() {

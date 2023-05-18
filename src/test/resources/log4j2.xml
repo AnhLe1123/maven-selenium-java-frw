@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5p] [%d] %m%n"/>
+        </Console>
+
+        <File name="Logfile" fileName="./scriptLogs/NopCommerce.txt">
+            <PatternLayout pattern="[%-5p] [%d] %m%n"/>
+        </File>
+
+        <File name="File" fileName="./scriptLogs/NopCommerce.log">
+            <PatternLayout pattern="[%-5p] [%d] %m%n"/>
+        </File>
+
+        <Reporter name="TestReporter">
+            <PatternLayout pattern="[%-5p] [%d{dd-MM-yyyy HH:mm:ss}] %m%n"/>
+        </Reporter>
+
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="Logfile"/>
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="TestReporter"/>
+        </Root>
+    </Loggers>
+</Configuration>
